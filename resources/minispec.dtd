@@ -1,0 +1,4 @@
+<!ELEMENT entity (name, attribute*)>
+<!ELEMENT attribute (name, type)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT type (#PCDATA)>

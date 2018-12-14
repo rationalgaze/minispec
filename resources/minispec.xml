@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE minispec SYSTEM "minispec.dtd">
+<entity>
+  <name>Satellite</name>
+  <attribute>
+    <name>nom</name>
+    <type>String</type>
+  </attribute>
+  <attribute>
+    <name>id</name>
+    <type>Integer</type>
+  </attribute>
+</entity>
