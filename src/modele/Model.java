@@ -3,7 +3,14 @@ package modele;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Model implements Element {
+/**
+ * @author Nikolai Vorotnikov
+ * La classe qui réprésent le métamodèle.
+ * Elle contient un nom et liste des éntités (classes)
+ * de métamodèle. 
+ * 
+ */
+public class Model {
   String name;
   List<Entity> entities;
   
