@@ -20,8 +20,12 @@ public class Entity implements Element {
     this.name = name;
   }
 
-  public List<Attribut> getAttr() {
+  public List<Attribut> getAllAttr() {
     return attr;
+  }
+  
+  public Attribut getAttr(int i) {
+    return attr.get(i);
   }
 
   public int getAttrNumber() {

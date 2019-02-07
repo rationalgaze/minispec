@@ -3,6 +3,8 @@ package modele;
 import java.util.ArrayList;
 import java.util.List;
 
+import codegen.Visitor;
+
 /**
  * @author Nikolai Vorotnikov
  * La classe qui réprésent métamodèle généré à partir d'un minispec.
@@ -27,5 +29,17 @@ public class Model {
     int size = entities.size();
     this.entities.add(e);
     return this.entities.size() > size;
+  }
+  
+  public Entity getEntity(int i) {
+    return entities.get(i);
+  }
+  
+  public String getName() {
+    return this.name;
+  }
+  
+  public void accept(Visitor v) {
+    v.visit(this);
   }
 }
