@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author Nikolai Vorotnikov
- * La classe qui réprésent le métamodèle.
+ * La classe qui réprésent métamodèle généré à partir d'un minispec.
  * Elle contient un nom et liste des éntités (classes)
  * de métamodèle. 
  * 

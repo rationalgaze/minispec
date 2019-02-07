@@ -30,6 +30,7 @@ public class XMLReader {
       
       document.getDocumentElement().normalize();      
       
+      // Création du modéle généré de minispec
       model = new Model("my model");
       
       //Affichage de l'élément racine
@@ -43,6 +44,7 @@ public class XMLReader {
           Element el = (Element) nNode;
           
           Element name = (Element) el.getElementsByTagName("name").item(0);
+          // Creation d'un entité qui prends le nom comme parametre
           Entity e = new Entity(name.getTextContent());
           
           System.out.println("Name : " + name.getTextContent());
@@ -58,11 +60,13 @@ public class XMLReader {
               Element att_name = (Element) attrEl.getElementsByTagName("name").item(0);
               Element att_type = (Element) attrEl.getElementsByTagName("type").item(0);
               
+              // On ajoute des attributes dans l'entité
               e.addAttr(new Attribut(att_name.getTextContent(), att_type.getTextContent()));
               System.out.println("  Attr Name : " + att_name.getTextContent());
               System.out.println("  Attr Type : " + att_type.getTextContent());
             }
           }
+          // On ajoute l'entité dans notre modéle
           model.addEntity(e);
         }
       }
